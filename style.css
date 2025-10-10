@@ -57,6 +57,10 @@ body {
     background-color: rgb(236, 225, 175);
 }
 
+#display{
+  padding-top: 1.5rem;
+}
+
 #container{
     padding: 4rem;
     display: flex;
@@ -84,6 +88,16 @@ body {
   display: flex;
 }
 
+.title{
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.author{
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
 #book-form{
   display: none;
 }
@@ -91,4 +105,9 @@ body {
 .book-div{
   display: grid;
   grid-template-columns: 6fr 1fr 1fr;
+}
+
+.book-span {
+  display: flex;
+  align-items: baseline;
 }
