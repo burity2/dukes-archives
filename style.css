@@ -319,6 +319,10 @@ img{
   align-items: baseline;
 }
 
+.hover-check {
+  display: none;
+}
+
 #library{
   display: flex;
   flex-direction: column;
