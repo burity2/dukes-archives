@@ -4,43 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>Duke's Archives</title>
+    <title>Thoth's Tomes</title>
 </head>
 <body>
     <div id="container">
         <div id="header">
-            <div id="title">The Archive's Books</div>
-            <div id="subtitle">I dare you to pick one, mortal!</div>
-            <button id="form-toggler">new book</button>
+            <div id="title-n-btns">
+                <div id="title">Thoth's Tomes</div>
+                <div id="ctrl-btns">
+                    <button id="form-toggler">new tome</button>
+                    <button id="clear-library">burn them!</button>
+                </div>
+            </div>
+            <div id="subtitle">Who enters the library of Thoth?</div>
+            <div>
+                <img id="header-img" src="./5403.jpg" alt="an egyptian stone carved portrait of the god Thoth">
+            </div>
+        
         </div>
+        <hr id="opener-hr">
         <div id = "display">
             <div id="book-form-div">
                     <form id="book-form">
-                    <div>
-                        <label for="book-title">Title:</label>
-                        <input type="text" id="book-title" name="book-title" placeholder="The Odyssey" required>
+                        <button id="form-closer-btn">X</button>
+                        <div class="form-group" id="title-n-author">
+                            <label for="book-title">Title:</label>
+                            <input type="text" id="book-title" name="book-title" placeholder="The Odyssey" required>
 
-                        <label for="book-author">Author:</label>
-                        <input type="text" id="book-author" name="book-author" placeholder="Homer" required>
-                        <label for="book-status">Read?
-                        <label for="yes">Yes</label>
-                        <input type="radio" class="radio" id="yes" name="book-status" value=true required>
-
-                        <label for="no">No</label>
-                        <input type="radio" class="radio" id="no" name="book-status" value=false>
-                        </label>
-
-                    </div>
-                    <div>
-                        <button>add book</button>
-                        <input type="reset" value="clear">
-                        <button id="form-closer-btn">close</button>
-                    </div>
-                </form>
-            
+                            <label for="book-author">Author:</label>
+                            <input type="text" id="book-author" name="book-author" placeholder="Homer" required>
+                        </div>
+                        <div class="form-group" id="radio-form-group">
+                            <div id="radio-organizer">
+                            <p>Read?</p>
+                            <div id="radio-btns-div">
+                            <label class="radio">Yes
+                                <input type="radio" id="yes" name="book-status" value=true required>
+                                <span class="checkmark"></span>
+                            </label>   
+                            <label class="radio">No        
+                            <input type="radio" id="no" name="book-status" value=false>
+                            <span class="checkmark"></span>
+                            </label>
+                            </div>
+                            </div>
+                                <div id="form-btns">
+                                <button id="book-adder">add book</button>
+                                <input id="form-resetter" type="reset" value="clear">
+                                </div>
+                            </div>
+                            <hr id="closer-hr">
+                        </div>
+                    </form>
             </div>
-            <button id="clear-library">clear library</button>
-            <div id="library"></div>
+
+            <div id="library">
+                <div id="empty-library-message" style="display: none;">All books have been destroyed, Thoth's Library is empty...</div>
+            </div>
         </div>
     </div>
     <script src="./js.js"></script>

@@ -3,28 +3,50 @@ const myLibrary = [];
 
 //start the page with the book function
 window.onload = function() {
-    bookDisplayer()}
+    let form = document.querySelector("#book-form");
+    form.style.display="none";
+    libSorter();
+    bookDisplayer();
+    emptyLibraryMessage();
+};
 
-//deletes bok divs
+//deletes book divs
 let libraryClean = () => {
     let bookDivSelector = document.querySelectorAll(".book-div");
     bookDivSelector.forEach(element => {element.remove();
+
     });
 }
 
+//clear library btn
+let libClearButton = document.getElementById("clear-library")
+libClearButton.addEventListener("click", () => {
+    let checker = () => {
+        let result = confirm("this will delete all your books, are you sure?");
+        if (result == true) {
+            let clearLib = () => {myLibrary.splice(0, myLibrary.length)}
+            clearLib();
+            libraryClean();
+        }
+    }
+    checker();
+})
+
 //library refresher (delete books + display them again)
 let libraryRefresher = () => {
+    libSorter();
     libraryClean();
     bookDisplayer();
+    emptyLibraryMessage();
 }
 
-//hide/shows forms
+//hide/shows form
 let displayForm = document.querySelector("#form-toggler");
 displayForm.addEventListener("click", () => {
 
     let form = document.querySelector("#book-form");
-    form.style.display="block";
-    displayForm.style.display="none";
+    form.style.display="grid";
+    displayForm.disabled = true;
 
 });
 
@@ -33,7 +55,7 @@ hideForm.addEventListener("click", () => {
         
     let form = document.querySelector("#book-form");
     form.style.display="none";
-    displayForm.style.display="block";
+    displayForm.disabled=false;
 })
 
 // creates books
@@ -64,6 +86,7 @@ addBookToLibrary(book3);
 // will loop through the Library array and then display the books
 let arr = myLibrary;
 let bookDisplayer = () => {
+    libSorter();
     for (i= 0; i < arr.length; i++) {
         let bookDivCreator = document.getElementById("library");
         let bookUl = document.createElement("div");
@@ -99,6 +122,7 @@ form.addEventListener("submit", (ev) => {
     document.book-form.reset();
 });
 
+//delete specific books by matching book & button id
 document.addEventListener("click", function(event){
     let btn = event.target;
     let arr = myLibrary;
@@ -110,6 +134,7 @@ document.addEventListener("click", function(event){
 }
 });
 
+//toggle isRead status of an specific books by matching book & checkbox id
 document.addEventListener("click", function(event){
     let input = event.target;
     let arr = myLibrary;
@@ -120,6 +145,27 @@ document.addEventListener("click", function(event){
         arr[n].isRead = "false"
     }
 }
+libraryRefresher();
 });
 
+//sort the array, pushing read books to its end
+let libSorter = () => {
+ myLibrary.sort((a, b) => {
+    if (a.isRead > b.isRead) {
+        return 1;
+    } else {
+        return -1;
+    }
+});
+}
 
+//display "empty library" message if all boook are deleted
+let emptyLibraryMessage = () => {
+    let emptyMsg = document.getElementById("empty-library-message");
+    let bookDivs = document.querySelectorAll(".book-div");
+    if (bookDivs.length === 0) {
+        emptyMsg.style.display = "block";
+    } else {
+        emptyMsg.style.display = "none"
+    }
+}
