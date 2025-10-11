@@ -148,8 +148,7 @@ input[type="checkbox"] {
 
 #radio-organizer{
   display: flex;
-  gap: 1rem
-  ;
+  gap: 1rem;
 }
 
 #container{
@@ -162,12 +161,12 @@ input[type="checkbox"] {
 
 #header{
     display: grid;
-    grid-template-columns: 2fr 3fr 1fr;
+    grid-template-columns: 2fr 4fr 1fr;
     gap: 0.3rem;
 }
 
 #ctrl-btns button{
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   padding: 0.2rem 1.4rem;
 }
 
@@ -205,15 +204,13 @@ input[type="checkbox"] {
   background-color: #e2c281;
 }
 
-
-
 #clear-library{
   background-color: #e04217;
   color: #FFEDC0;
 }
 
 #clear-library:hover{
-  background-color: #e75931;
+  background-color: #ff7f5c;
 }
 
 #form-closer-btn {
@@ -229,6 +226,7 @@ input[type="checkbox"] {
 
 img{
   width: 6rem;
+  min-width: 3rem;
   justify-self: right;;
   border-radius: 1.2rem;
   transform: rotateY(180deg);
@@ -243,13 +241,32 @@ img{
     font-style: italic;
     font-size: 1.2rem;
     justify-self: right;
-    align-self: center;
+    align-self:flex-start;
+    background-color: #e3ba66;
+    border-radius: 0.6rem;
+    padding: 0.1rem 0.5rem;
 }
 
 #title-n-btns{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+
+.main-btns {
+  filter: brightness(0) saturate(100%) invert(99%) sepia(51%) saturate(1224%) hue-rotate(311deg) brightness(104%) contrast(101%);
+  width: 1rem;
+}
+
+.delete-btns {
+  filter: brightness(0) saturate(100%) invert(99%) sepia(51%) saturate(1224%) hue-rotate(311deg) brightness(104%) contrast(101%);
+  width: 1.5rem;
+  height: 1.5rem;
+  align-self: center;
+}
+
+.delete-book-btn {
+  border-radius: 1rem;
 }
 
 .title{
@@ -281,20 +298,20 @@ img{
 
 .book-div{
   display: grid;
-  grid-template-columns: 7.5fr 1fr 1fr;
+  grid-template-columns: 15fr 1fr 1fr;
   padding: 0.8rem;
   background-color: #E5D4AA;
   border-radius: 1rem;
 }
 
 .book-div button{
-  background-color: #e04217;
+  background-color: #b9a676;
   color: #FFEDC0;
   padding: 0.2rem;
 }
 
 .book-div button:hover{
-  background-color: #e75931;
+  background-color: #ff8c6d;
 }
 
 .book-span {

@@ -106,7 +106,7 @@ let bookDisplayer = () => {
             bookUl.innerHTML += `<input id="${arr[i].id}" class='isRead-checkbox' type='checkbox'>`
         }
         
-        bookUl.innerHTML += `<button id="${arr[i].id}" class='delete-book-btn'>delete</button>`
+        bookUl.innerHTML += `<button id="${arr[i].id}" class='delete-book-btn'><img class="delete-btns" src="./icons/delete.svg" alt=""></button>`
 }
 };
 
