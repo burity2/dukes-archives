@@ -54,14 +54,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-    background-color: #FFEDC0;
-    color: #34140e;
+    background-color: #ffecbd;
+    color: #362719;
 }
 
 #opener-hr{
   margin-top: 1.3rem;
   margin-bottom: 0.2rem;
-  border-color: #34140e;
+  border-color: #362719;
   border-width: 0.1rem;
   grid-column: 1 / -1;
 }
@@ -69,7 +69,7 @@ body {
 #closer-hr{
   margin-bottom: 1.3rem;
   margin-top: 0.5rem;
-  border-color: #34140e;
+  border-color: #362719;
   border-width: 0.1rem;
   grid-column: 1 / -1;
 }
@@ -101,8 +101,8 @@ input[type="radio"] {
 }
 
 input[type="checkbox"] {
-  accent-color: #e3ba66;
-  border: 1px solid #FFEDC0;
+  accent-color: #eda95c;
+  border: 1px solid #ffecbd;
 }
 
 #form-btns{
@@ -125,7 +125,7 @@ input[type="checkbox"] {
   display: flex;
   flex-direction: row-reverse;
   gap: 0.1rem;
-  accent-color:#34140e;
+  accent-color:#362719;
 }
 
 #radio-div{
@@ -177,17 +177,17 @@ input[type="checkbox"] {
 
 #form-toggler,
 #book-adder{
-  background-color: #598DFF;
-  color: #FFEDC0;
+  background-color: #6AC1F7;
+  color: #ffecbd;
 }
 
 #form-toggler:hover,
 #book-adder:hover{
-  background-color: #729fff;
+  background-color: #1EA6FA;
 }
 
 #form-toggler:disabled{
-  background-color: #c1c8da;
+  background-color: #4C697A;
 }
 
 #form-toggler:disabled:hover{
@@ -196,21 +196,21 @@ input[type="checkbox"] {
 
 #form-closer-btn,
 #form-resetter {
-  background-color: #e3ba66
+  background-color: #ffdb8f;
 }
 
 #form-resetter:hover,
 #form-closer-btn:hover {
-  background-color: #e2c281;
+  background-color: #ffe9a6;
 }
 
 #clear-library{
-  background-color: #e04217;
-  color: #FFEDC0;
+  background-color: #ba6b48;
+  color: #ffecbd;
 }
 
 #clear-library:hover{
-  background-color: #ff7f5c;
+  background-color: #d37c50;
 }
 
 #form-closer-btn {
@@ -242,7 +242,7 @@ img{
     font-size: 1.2rem;
     justify-self: right;
     align-self:flex-start;
-    background-color: #e3ba66;
+    background-color: #f7bc69;
     border-radius: 0.6rem;
     padding: 0.1rem 0.5rem;
 }
@@ -300,18 +300,18 @@ img{
   display: grid;
   grid-template-columns: 15fr 1fr 1fr;
   padding: 0.8rem;
-  background-color: #E5D4AA;
+  background-color: #E2D1A7;
   border-radius: 1rem;
 }
 
 .book-div button{
-  background-color: #b9a676;
-  color: #FFEDC0;
+  background-color: #C5B692;
+  color: #ffecbd;
   padding: 0.2rem;
 }
 
 .book-div button:hover{
-  background-color: #ff8c6d;
+  background-color: #d37c50;
 }
 
 .book-span {
@@ -331,6 +331,6 @@ img{
 }
 
 #empty-library-message {
-  color: #34140e;
+  color: #362719;
   font-size: 1.7rem;
 }
