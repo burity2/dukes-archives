@@ -187,7 +187,7 @@ input[type="checkbox"] {
 }
 
 #form-toggler:disabled{
-  background-color: #4C697A;
+  background-color: #E2D1A7;
 }
 
 #form-toggler:disabled:hover{
@@ -196,12 +196,12 @@ input[type="checkbox"] {
 
 #form-closer-btn,
 #form-resetter {
-  background-color: #ffdb8f;
+  background-color: #E2D1A7;
 }
 
 #form-resetter:hover,
 #form-closer-btn:hover {
-  background-color: #ffe9a6;
+  background-color: #dac389;;
 }
 
 #clear-library{
