@@ -27,6 +27,11 @@ libClearButton.addEventListener("click", () => {
             let clearLib = () => {myLibrary.splice(0, myLibrary.length)}
             clearLib();
             libraryClean();
+            let p = document.getElementById("subtitle");
+            p.innerHTML = "What have you done..."
+        } else {
+            let p = document.getElementById("subtitle");
+            p.innerHTML = "Please, do not repeat this joke"
         }
     }
     checker();
@@ -169,3 +174,148 @@ let emptyLibraryMessage = () => {
         emptyMsg.style.display = "none"
     }
 }
+
+//add Thoth's dialogue related to pressed buttons
+let thothSpeaks = document.querySelector("body");
+let number = () => Math.floor(Math.random() * 3);
+
+thothSpeaks.addEventListener("click", (event) => {
+    let target = event.target;
+    let p = document.getElementById("subtitle");
+    let phrase = number();
+
+    switch(target.id){
+        case "body", "container":
+            if (phrase === 2) {
+                p.innerHTML = "Are you lost, mortal?"
+            } else if (phrase === 1){ 
+                p.innerHTML = "Wouldn't you rather test the Library?"
+            } else {
+                p.innerHTML = "That's not where you click..."
+            }
+            break;
+
+        case "header-img":
+            if (phrase === 2) {
+                p.innerHTML = "How dare you touch the sculpture of Thoth?!"
+            } else if (phrase === 1){ 
+                p.innerHTML = "Out of my sight, mortal!"
+            } else {
+                p.innerHTML = "Quit pestering me, human-size mosquito!"
+            }
+            break;
+
+        case "form-toggler":
+            if (phrase === 2) {
+                p.innerHTML = "A new tome ready for submisson!"
+            } else if (phrase === 1){ 
+                p.innerHTML = "Will you read this one?"
+            } else {
+                p.innerHTML = "There's no more room for foolish tomes!"
+            }            
+            break;
+
+        case "form-closer-btn":
+            if (phrase === 2) {
+                p.innerHTML = "You deny me knowledge?"
+            } else if (phrase === 1){ 
+                p.innerHTML = "No more books? Sad"
+            } else {
+                p.innerHTML = "Better to finish the ones you already started"
+            }
+            break;
+
+        case "book-title":
+            if (phrase === 2) {
+                p.innerHTML = "Never heard of this one..."
+            } else if (phrase === 1){ 
+                p.innerHTML = "That is the TITLE? HAHAHAHAHA"
+            } else {
+                p.innerHTML = "I disapprove this tome"
+            }
+            break;
+
+        case "book-author":
+            if (phrase === 2) {
+                p.innerHTML = "Who is this mortal?"
+            } else if (phrase === 1){ 
+                p.innerHTML = "What a strange name..."
+            } else {
+                p.innerHTML = "Are you sure that's how you spell it?"
+            }
+            break;
+
+        case "yes":
+            if (phrase === 2) {
+                p.innerHTML = "Pffft, I doubt it!"
+            } else if (phrase === 1){ 
+                p.innerHTML = "Do you know how to read?"
+            } else {
+                p.innerHTML = "I bet this was your first book ever ¬¬"
+            }
+            break;
+
+        case "no":
+            if (phrase === 2) {
+                p.innerHTML = "Another one never to be read..."
+            } else if (phrase === 1){ 
+                p.innerHTML = "What secrets might it contain?"
+            } else {
+                p.innerHTML = "Somehow I don't doubt that"
+            }
+            break;
+
+        case "book-adder":
+            if (phrase === 2) {
+                p.innerHTML = "A newcomer! Our Library is now bigger than ever!"
+            } else if (phrase === 1){ 
+                p.innerHTML = "Let's delight on this tome's secrets!"
+            } else {
+                p.innerHTML = "More books! YAY"
+            }
+            break;
+
+        case "form-resetter":
+            if (phrase === 2) {
+                p.innerHTML = "Missed a letter?"
+            } else if (phrase === 1){ 
+                p.innerHTML = "I'll teach you how to write soon enough"
+            } else {
+                p.innerHTML = "Another mistake! Unacceptable!"
+            }
+            break;
+        };
+
+    switch(target.className){
+        case "book-div", "book-span":
+            if (phrase === 2) {
+                p.innerHTML = "Seems like an interesting one!"
+            } else if (phrase === 1){ 
+                p.innerHTML = "Nah, already read it, it was rather dull..."
+            } else {
+                p.innerHTML = "I'm halfway done with this one, quite good"
+            }
+            break;
+
+        case "isRead-checkbox":
+            if (phrase === 2) {
+                p.innerHTML = "Why lie to yourself?"
+            } else if (phrase === 1){ 
+                p.innerHTML = "You finished this one faster than me!"
+            } else {
+                p.innerHTML = "Finally! Took you long enough!"
+            }
+            break;
+
+        case "delete-book-btn":
+            if (phrase === 2) {
+                p.innerHTML = "Knowledge lost... Are you happy now?"
+            } else if (phrase === 1){ 
+                p.innerHTML = "I was about to start that one, evil human!"
+            } else {
+                p.innerHTML = "NO, THAT WAS MY FAVOURITE!"
+            }
+            break;
+    }
+
+});
