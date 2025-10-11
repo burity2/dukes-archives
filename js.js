@@ -106,7 +106,7 @@ let bookDisplayer = () => {
             bookUl.innerHTML += `<input id="${arr[i].id}" class='isRead-checkbox' type='checkbox'>`
         }
         
-        bookUl.innerHTML += `<button id="${arr[i].id}" class='delete-book-btn'><img class="delete-btns" src="./icons/delete.svg" alt=""></button>`
+        bookUl.innerHTML += `<button id="${arr[i].id}" class='delete-book-btn'><img id="${arr[i].id}" class="delete-btns" src="./icons/delete.svg" alt=""></button>`
 }
 };
 
@@ -132,7 +132,7 @@ document.addEventListener("click", function(event){
     let btn = event.target;
     let arr = myLibrary;
     for (n= 0; n < arr.length; n++) {
-    if (btn.className == "delete-book-btn" && btn.id == arr[n].id) {
+    if ((btn.className == "delete-book-btn" || btn.className == "delete-btns") && btn.id == arr[n].id) {
         arr.splice(n, 1)
         libraryRefresher();
     }
