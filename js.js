@@ -64,13 +64,14 @@ hideForm.addEventListener("click", () => {
 })
 
 // creates books
-function Book(title, author, isRead) {
+class Book {
+    constructor (title, author, isRead) {
     this.title = title;
     this.author = author;
     this.isRead = isRead;
 
-    let id = crypto.randomUUID();
-    this.id = id;
+    this.id = crypto.randomUUID();
+    };
     
 };
 
